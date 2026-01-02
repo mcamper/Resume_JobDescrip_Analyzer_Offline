@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume vs Job Description Analyzer - Offline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Resume vs Job Description Analyzer</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="panel">
+      <h2>Resume Text</h2>
+      <textarea id="resumeText" placeholder="Paste your resume here"></textarea>
+    </div>
+
+    <div class="panel">
+      <h2>Job Description Text</h2>
+      <textarea id="jobText" placeholder="Paste the job description here"></textarea>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="analyzeBtn">Analyze</button>
+    <button id="clearBtn">Clear All</button>
+    <button id="exportPDFBtn">Export to PDF</button>
+    <button id="exportWordBtn">Export to Word</button>
+  </div>
+
+  <div id="spinner" class="spinner hidden"></div>
+
+  <h2>Match Score</h2>
+  <div class="progress-container">
+    <div id="matchProgress" class="progress-bar">0%</div>
+  </div>
+
+  <h2>Results</h2>
+  <div id="resultsBox"></div>
+
+  <h2>Highlighted Resume Preview</h2>
+  <div id="highlightedResume" class="output"></div>
+
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
